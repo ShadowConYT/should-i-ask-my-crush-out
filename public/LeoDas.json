@@ -1,0 +1,556 @@
+{
+  "start": {
+    "question": "Is your crush seeing someone?",
+    "options": {
+      "yes": {
+        "next_node": "define_seeing",
+        "answer": "You selected: yes"
+      },
+      "no": {
+        "next_node": "how_do_you_know_crush",
+        "answer": "You selected: no"
+      },
+      "i don't know": {
+        "next_node": "find_out",
+        "answer": "You selected: i don't know"
+      }
+    }
+  },
+  "find_out": {
+    "question": "You should find out if your crush is seeing someone.\nIs your crush seeing someone?",
+    "options": {
+      "yes": {
+        "next_node": "define_seeing",
+        "answer": "Your crush is seeing someone"
+      },
+      "no": {
+        "next_node": "how_do_you_know_crush",
+        "answer": "Your crush is not seeing someone"
+      }
+    }
+  },
+  "how_do_you_know_crush": {
+    "question": "How do you know your crush?",
+    "options": {
+      "online": {
+        "next_node": "online_intro",
+        "answer": "You know your crush online"
+      },
+      "through in-person circumstances": {
+        "next_node": "in_person_intro",
+        "answer": "You know your crush through in-person circumstances"
+      }
+    }
+  },
+  "in_person_intro": {
+    "question": "How did you meet them in person?",
+    "options": {
+      "via friends": {
+        "next_node": "via_friends_intro",
+        "answer": "You met your crush via friends"
+      },
+      "through school": {
+        "next_node": "school_scenario",
+        "answer": "You met your crush through school"
+      },
+      "through work": {
+        "next_node": "work_scenario",
+        "answer": "You met your crush through work"
+      },
+      "at a third space (coffee shop, bar, airport, supermarket etc)": {
+        "next_node": "third_space_outcome",
+        "answer": "You met your crush at a third space"
+      }
+    }
+  },
+  "online_intro": {
+    "question": "Are they a celebrity?",
+    "options": {
+      "yes": {
+        "next_node": "celebrity_outcome",
+        "answer": "Your crush is a celebrity"
+      },
+      "no": {
+        "next_node": "dating_app_intro",
+        "answer": "Your crush is not a celebrity"
+      }
+    }
+  },
+  "celebrity_outcome": {
+    "answer": "You can tell them but they're never gonna know about it"
+  },
+  "dating_app_intro": {
+    "question": "Did you meet them on a dating app?",
+    "options": {
+      "yes": {
+        "next_node": "dating_app_outcome",
+        "answer": "You met your crush on a dating app"
+      },
+      "no": {
+        "next_node": "met_in_real_life",
+        "answer": "You did not meet your crush on a dating app"
+      }
+    }
+  },
+  "dating_app_outcome": {
+    "answer": "Yeah, you should tell them, but I assume they already know you like them (assuming you matched)"
+  },
+  "met_in_real_life": {
+    "question": "Have you ever met in real life?",
+    "options": {
+      "yes": {
+        "next_node": "tell_them_outcome",
+        "answer": "You have met this person in real life"
+      },
+      "no": {
+        "next_node": "online_only_outcome",
+        "answer": "You have not met this person in real life"
+      }
+    }
+  },
+  "tell_them_outcome": {
+    "answer": "You should tell them"
+  },
+  "online_only_outcome": {
+    "answer": "You can tell them, but there's a chance you won't be attracted to them in real life"
+  },
+  "third_space_outcome": {
+    "answer": "Tell them!!"
+  },
+  "via_friends_intro": {
+    "question": "Are you friends with your crush or did you meet them through friends?",
+    "options": {
+      "you're friends with ur crush": {
+        "next_node": "friends_with_crush_scenario",
+        "answer": "You are friends with your crush"
+      },
+      "u met through friends": {
+        "next_node": "met_through_friends_scenario",
+        "answer": "You met your crush through friends"
+      }
+    }
+  },
+  "friends_with_crush_scenario": {
+    "question": "Are you and your crush in a friend group together?",
+    "options": {
+      "yes": {
+        "next_node": "crush_ex_in_friend_group",
+        "answer": "You and your crush are in a friend group together"
+      },
+      "no / you're friends 1 on 1": {
+        "next_node": "friends_1on1_outcome",
+        "answer": "You and your crush are not in a friend group together"
+      }
+    }
+  },
+  "friends_1on1_outcome": {
+    "answer": "Tell them but be mentally prepared that it's gonna make things really awkward if they don't like you. I'm really sorry, but you should probably do it anyway for your mental clarity and for like your mental health. This is like the most movie-esque scenario that you can be in, right? If you tell your crush you like them and they're your best friend and they like you back and then, oh, you get married. Or you ruin things forever. But you never really know until you tell them, so you might as well just do it. Good luck, and tell us below what happened."
+  },
+  "met_through_friends_scenario": {
+    "question": "Do you and your crush have a mutual friend or is your crush related to your friend?",
+    "options": {
+      "u and ur crush have a mutual friend": {
+        "next_node": "friends_with_crush_scenario",
+        "answer": "You and your crush have a mutual friend"
+      },
+      "ur crush is related to your friend": {
+        "next_node": "crush_relative_intro",
+        "answer": "Your crush is related to your friend"
+      }
+    }
+  },
+  "crush_ex_in_friend_group": {
+    "question": "Was your crush ever seeing someone else in your friend group?",
+    "options": {
+      "yes": {
+        "next_node": "define_seeing_friend_group",
+        "answer": "Your crush has seen someone else in your friend group"
+      },
+      "no": {
+        "next_node": "friend_group_likes_crush",
+        "answer": "Your crush has never seen anyone else in your friend group"
+      }
+    }
+  },
+  "define_seeing_friend_group": {
+    "question": "Define 'seeing'",
+    "options": {
+      "your crush was casually hooking up with someone else in the friend group": {
+        "next_node": "friend_group_casual_advice",
+        "answer": "Your crush was casually hooking up with someone else in the friend group"
+      },
+      "ur crush was dating someone else in the friend group": {
+        "next_node": "friend_group_dating_seriousness",
+        "answer": "Your crush was dating someone else in the friend group"
+      }
+    }
+  },
+  "friend_group_dating_seriousness": {
+    "question": "How serious was it on a scale of 0-5?",
+    "options": {
+      "1-2": {
+        "next_node": "friend_group_casual_advice",
+        "answer": "They went on one bad date and are not attracted to each other at all"
+      },
+      "3-4": {
+        "next_node": "ask_out_friends_ex_ethical",
+        "answer": "They dated for a couple of weeks, didn't ever get serious"
+      },
+      "4-5": {
+        "next_node": "ask_out_friends_ex_ethical",
+        "answer": "They dated very seriously; met each others parents, over 3 months, maybe have a kid and/or pet together, talked about future plans"
+      }
+    }
+  },
+  "ask_out_friends_ex_ethical": {
+    "question": "Is it f***ed up for you to ask out your friend's ex?",
+    "options": {
+      "yes": {
+        "next_node": "dont_tell_them_general",
+        "answer": "Yes, it is f***ed up for you to ask out your friend's ex"
+      },
+      "no": {
+        "next_node": "check_if_they_still_have_feelings",
+        "answer": "No, it is not f***ed up for you to ask out your friend's ex"
+      }
+    }
+  },
+  "check_if_they_still_have_feelings": {
+    "question": "Do either of them still have feelings for each other?",
+    "options": {
+      "yes/ idk": {
+        "next_node": "friend_group_risk_assessment",
+        "answer": "Yes/ I don't know if they still have feelings for each other"
+      },
+      "no": {
+        "next_node": "sure_no_feelings",
+        "answer": "No, they don't have feelings for each other"
+      }
+    }
+  },
+  "sure_no_feelings": {
+    "question": "Are you sure?",
+    "options": {
+      "yes": {
+        "next_node": "friend_group_casual_advice",
+        "answer": "Yes, I'm sure"
+      },
+      "no": {
+        "next_node": "friend_group_risk_assessment",
+        "answer": "No, I'm not sure"
+      }
+    }
+  },
+  "friend_group_risk_assessment": {
+    "question": "Does the potential of getting together with your crush outweigh the risk of potentially changing the dynamic of the friend group forever?",
+    "options": {
+      "yes": {
+        "next_node": "tell_them_general",
+        "answer": "Yes, it is worth changing the friend dynamic"
+      },
+      "no": {
+        "next_node": "dont_tell_them_general",
+        "answer": "No, it is not worth changing the friend dynamic"
+      }
+    }
+  },
+  "tell_them_general": {
+    "answer": "Tell them"
+  },
+  "dont_tell_them_general": {
+    "answer": "Don't tell them"
+  },
+  "friend_group_likes_crush": {
+    "question": "Does anyone else in your friend group like your crush?",
+    "options": {
+      "yes": {
+        "next_node": "crush_reciprocation_chance",
+        "answer": "Someone else in your friend group likes your crush"
+      },
+      "no": {
+        "next_node": "friend_group_risk_assessment",
+        "answer": "No one else in your friend group likes your crush"
+      }
+    }
+  },
+  "crush_reciprocation_chance": {
+    "question": "Is there any chance your crush could like you back?",
+    "options": {
+      "yes": {
+        "next_node": "friend_group_risk_assessment",
+        "answer": "There is a chance your crush likes you back"
+      },
+      "no": {
+        "next_node": "probably_dont_tell_them",
+        "answer": "There is no chance your crush likes you back"
+      }
+    }
+  },
+  "probably_dont_tell_them": {
+    "answer": "I mean, I wouldn't tbh"
+  },
+  "crush_relative_intro": {
+    "question": "Oh my god, are they your friend's sibling?",
+    "options": {
+      "yes": {
+        "next_node": "crush_friend_sibling_motive",
+        "answer": "They are your friend's sibling"
+      },
+      "no": {
+        "next_node": "crush_friend_parent",
+        "answer": "They are not your friend's sibling"
+      }
+    }
+  },
+  "crush_friend_sibling_motive": {
+    "question": "Do you think you like them just because they're your friend's sibling?",
+    "options": {
+      "yes": {
+        "next_node": "dont_tell_them_general",
+        "answer": "You only like them because they are your friend's sibling"
+      },
+      "no": {
+        "next_node": "crush_friend_sibling_risk",
+        "answer": "You actually like them"
+      }
+    }
+  },
+  "crush_friend_sibling_risk": {
+    "question": "Does the prospect of being with your crush outweigh the fact that u may ruin/ make awkward (at least for a time) ur relationship with your friend?",
+    "options": {
+      "yes": {
+        "next_node": "tell_them_shitshow",
+        "answer": "You actually like them"
+      },
+      "no": {
+        "next_node": "dont_tell_them_general",
+        "answer": "Not worth to loose relationship with your friend"
+      }
+    }
+  },
+  "tell_them_shitshow": {
+    "answer": "Tell them, but it will be a shit show"
+  },
+  "crush_friend_parent": {
+    "question": "Are they your friend's parent???",
+    "options": {
+      "yes": {
+        "next_node": "do_not_engage",
+        "answer": "They are your friend's parent"
+      },
+      "no": {
+        "next_node": "do_not_engage",
+        "answer": "They are not your friend's parent"
+      }
+    }
+  },
+  "do_not_engage": {
+    "answer": "I'm not getting involved in this, close this right now"
+  },
+  "school_scenario": {
+    "question": "Do you see your crush often?",
+    "options": {
+      "no (e.g big campus; different majors)": {
+        "next_node": "tell_them_general",
+        "answer": "You don't see your crush often"
+      },
+      "yes (e.g we're in the same classes)": {
+        "next_node": "forced_proximity_crush",
+        "answer": "You do see your crush often"
+      }
+    }
+  },
+  "forced_proximity_crush": {
+    "question": "Do you actually like them or do you only have a crush on them because you're in forced proximity with them?",
+    "options": {
+      "no i actually like them": {
+        "next_node": "crush_without_proximity",
+        "answer": "You actually like them"
+      },
+      "i think its the forced proximity": {
+        "next_node": "dont_tell_them_forced_proximity",
+        "answer": "You only like them because of forced proximity"
+      }
+    }
+  },
+  "crush_without_proximity": {
+    "question": "You're saying you would have a crush on this person even if you didn't have to see them everyday?",
+    "options": {
+      "yes": {
+        "next_node": "tell_them_forced_proximity",
+        "answer": "Yes, you would still have a crush on them even if you didn't see them everyday"
+      },
+      "uuuuh ok maybe not": {
+        "next_node": "dont_tell_them_forced_proximity",
+        "answer": "Maybe not"
+      }
+    }
+  },
+  "tell_them_forced_proximity": {
+    "answer": "Tell them (either the best relationship of your life and you'll be married or make things incredibly awkward and uncomfortable for yourself everyday when you're forced to see them)"
+  },
+  "dont_tell_them_forced_proximity": {
+    "answer": "Don't tell them because it's going to ruin the purpose they serve in your life rn"
+  },
+  "work_scenario": {
+    "question": "Do you fear being fired?",
+    "options": {
+      "yes": {
+        "next_node": "dont_tell_them_general",
+        "answer": "You fear being fired"
+      },
+      "no": {
+        "next_node": "confirm_no_fear_firing",
+        "answer": "You don't fear being fired"
+      }
+    }
+  },
+  "confirm_no_fear_firing": {
+    "question": "Are you sure?",
+    "options": {
+      "no i kinda need to pay rent": {
+        "next_node": "dont_tell_them_general",
+        "answer": "You need to pay rent"
+      },
+      "yeah i hate my job": {
+        "next_node": "work_hierarchy_comparison",
+        "answer": "You hate your job"
+      }
+    }
+  },
+  "work_hierarchy_comparison": {
+    "question": "Is your crush the same level as you in the work hierarchy?",
+    "options": {
+      "yes": {
+        "next_node": "forced_proximity_crush",
+        "answer": "Your crush is on the same level of work hierarchy"
+      },
+      "no": {
+        "next_node": "superior_inferior_dynamic",
+        "answer": "Your crush is not on the same level of work hierarchy"
+      }
+    }
+  },
+  "superior_inferior_dynamic": {
+    "question": "Whether your crush is your superior or you are their superior?",
+    "options": {
+      "they're your superior": {
+        "next_node": "crush_authority_figure",
+        "answer": "You crush is your superior"
+      },
+      "you're their superior": {
+        "next_node": "crush_power_play",
+        "answer": "You are superior to your crush"
+      }
+    }
+  },
+  "crush_authority_figure": {
+    "question": "Do you just like them because you have a weird thing for authority figures?",
+    "options": {
+      "yes": {
+        "next_node": "authority_figure_outcome",
+        "answer": "You have a weird thing for authority figures"
+      }
+    }
+  },
+  "authority_figure_outcome": {
+    "answer": "If you do it there is a 1% chance you'll get a promotion and a 99% percent chance you'll be fired immediately"
+  },
+  "crush_power_play": {
+    "question": "Is there any chance at all your crush actually likes you or is this just some sick power play that will make your crush incredibly uncomfortable for the rest of their limited time working there before they inevitably resign?",
+    "options": {
+      "yes": {
+        "next_node": "hr_intervention",
+        "answer": "There is a chance your crush likes you back"
+      },
+      "no": {
+        "next_node": "dont_tell_them_general",
+        "answer": "There is no chance your crush likes you back"
+      }
+    }
+  },
+  "hr_intervention": {
+    "answer": "HR will hear about this"
+  },
+  "define_seeing": {
+    "question": "Define 'seeing'",
+    "options": {
+      "theyre hooking up with someone": {
+        "next_node": "hookup_scenario",
+        "answer": "Your crush is hooking up with someone"
+      },
+      "theyre casually dating someone": {
+        "next_node": "casual_dating_scenario",
+        "answer": "Your crush is casually dating someone"
+      },
+      "theyre in a relationship": {
+        "next_node": "dont_tell_them_general",
+        "answer": "Your crush is in relationship"
+      }
+    }
+  },
+  "casual_dating_scenario": {
+    "question": "Is it actually casual?",
+    "options": {
+      "yes": {
+        "next_node": "casual_dating_dynamics",
+        "answer": "They're casually dating."
+      },
+      "no": {
+        "next_node": "dont_tell_them_general",
+        "answer": "Your crush is in relationship"
+      }
+    }
+  },
+  "casual_dating_dynamics": {
+    "question": "Are they dating with the same person or multiple people?",
+    "options": {
+      "same person": {
+        "next_node": "situationship_scenario",
+        "answer": "They're dating the same person"
+      },
+      "multiple": {
+        "next_node": "tell_them_what_you_want",
+        "answer": "They're casually dating with multiple people"
+      }
+    }
+  },
+  "hookup_scenario": {
+    "question": "Are they hooking up with the same person or multiple people?",
+    "options": {
+      "same person": {
+        "next_node": "situationship_scenario",
+        "answer": "They're hooking up with the same person"
+      },
+      "multiple": {
+        "next_node": "tell_them_what_you_want",
+        "answer": "They're hooking up with multiple people"
+      }
+    }
+  },
+  "situationship_scenario": {
+    "question": "What's their role in the situationship?",
+    "options": {
+      "they're in a situationship and they're the one who won't commit and is dragging the other person along": {
+        "next_node": "situationship_non_committer",
+        "answer": "They're in a situationship and they're the one who won't commit and is dragging the other person along"
+      },
+      "they're in a situationship and they're being dragged along by the other person who won't commit": {
+        "next_node": "situationship_commitee",
+        "answer": "They're in a situationship and they're being dragged along by the other person who won't commit"
+      }
+    }
+  },
+  "tell_them_what_you_want": {
+    "answer": "Tell them, but it depends what you want out of this"
+  },
+  "situationship_non_committer": {
+    "answer": "Don't tell them unless you also want to be in a situationship"
+  },
+  "situationship_commitee": {
+    "answer": "Tell them but it's likely they'll be too blinded by that other person to reciprocate your feelings"
+  },
+  "friend_group_casual_advice": {
+    "answer": "Yeah, do it! *so long as ur ok with the fact that getting together with ur crush and/or potentially breaking up with them may/ will change the dynamic of the friend group forever/ breaking up the friend group"
+  }
+}
